@@ -32,9 +32,6 @@ export const metadata: Metadata = {
   title: "Ekāgra — One-pointedness through the body",
   description:
     "Yoga as system regulation. Not lineage. Not mantras. The body is the only path you can't make excuses out of.",
-  icons: {
-    icon: "/favicon.ico",
-  },
 }
 
 export default function RootLayout({

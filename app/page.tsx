@@ -436,22 +436,30 @@ export default function EkagraNow() {
       {/* ═══ HERO ═══ */}
       <section
         ref={heroRef}
-        className="relative h-[100svh] min-h-[680px] w-full overflow-hidden"
+        className="relative h-[100svh] min-h-[680px] w-full overflow-hidden bg-deep-brown-darker"
       >
+        {/* Image — keeps full vibrancy, slight warmth boost */}
         <motion.div style={{ y: heroImageY }} className="absolute inset-0 -bottom-[160px]">
           <Image
             src="/images/hero-image.jpg"
             alt="Yoga practice by the Ganga at sunrise"
             fill
             priority
-            className="object-cover"
+            className="object-cover saturate-[1.08] contrast-[1.05]"
           />
         </motion.div>
+
+        {/* Subtle top wash — just enough so mark + IG are legible */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[28vh] bg-gradient-to-b from-deep-brown-darker/55 via-deep-brown-darker/20 to-transparent" />
+
+        {/* Bottom vignette — stronger where text sits, fades up naturally */}
         <motion.div
           style={{ opacity: heroOverlay }}
-          className="absolute inset-0 bg-gradient-to-b from-deep-brown/50 via-deep-brown/30 to-deep-brown/70"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[88vh] bg-[linear-gradient(to_top,rgba(26,22,19,0.88)_0%,rgba(26,22,19,0.55)_35%,rgba(26,22,19,0.2)_65%,transparent_100%)]"
         />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[40vh] bg-gradient-to-t from-sand to-transparent" />
+
+        {/* Seamless join with next section — tiny fade, not a wash */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[8vh] bg-gradient-to-t from-sand to-transparent" />
 
         {/* top-left mark */}
         <div className="absolute left-6 top-6 z-10 md:left-10 md:top-8">
@@ -460,7 +468,7 @@ export default function EkagraNow() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
-            className="font-display text-xl tracking-tight text-off-white md:text-2xl"
+            className="font-display text-xl tracking-tight text-off-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] md:text-2xl"
           >
             ekāgra<span className="text-ember">.</span>
           </motion.a>
@@ -474,7 +482,7 @@ export default function EkagraNow() {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
-          className="group absolute right-6 top-6 z-10 flex items-center gap-1.5 font-mono text-xs tracking-tight text-off-white md:right-10 md:top-8"
+          className="group absolute right-6 top-6 z-10 flex items-center gap-1.5 font-mono text-xs tracking-tight text-off-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)] md:right-10 md:top-8"
         >
           <Instagram className="h-3.5 w-3.5" />
           <span className="hidden sm:inline">@ekagra_now</span>
@@ -483,23 +491,25 @@ export default function EkagraNow() {
 
         <motion.div
           style={{ y: heroTextY }}
-          className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-off-white"
+          className="relative z-10 flex h-full flex-col items-center justify-end px-6 pb-32 text-center text-off-white md:pb-40"
         >
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4, ease: [0.22, 0.61, 0.36, 1] }}
-            className="mb-8"
+            className="mb-7"
           >
-            <Eyebrow className="text-off-white/70">One-pointedness · through the body</Eyebrow>
+            <Eyebrow className="text-ember/90 drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
+              One-pointedness · through the body
+            </Eyebrow>
           </motion.div>
 
-          <h1 className="mx-auto max-w-[20ch] font-display text-[clamp(2.5rem,8vw,6.5rem)] font-normal leading-[1.05] tracking-[-0.01em] text-off-white [text-shadow:0_2px_40px_rgba(0,0,0,0.3)]">
+          <h1 className="mx-auto max-w-[18ch] font-display text-[clamp(2.5rem,8vw,6.5rem)] font-normal leading-[1.02] tracking-[-0.015em] text-off-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.45)]">
             <KineticText text="Start with your spine." as="span" className="block" />
             <KineticText
               text="Not with meditation."
               as="span"
-              className="block text-ember/90"
+              className="block text-ember"
               delay={0.5}
             />
           </h1>
@@ -508,10 +518,10 @@ export default function EkagraNow() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.4, ease: [0.22, 0.61, 0.36, 1] }}
-            className="mt-10 max-w-[38ch] font-serif text-lg italic leading-relaxed text-off-white/80 md:text-xl"
+            className="mt-8 max-w-[38ch] font-serif text-base italic leading-relaxed text-off-white/90 drop-shadow-[0_1px_12px_rgba(0,0,0,0.4)] md:mt-10 md:text-lg"
           >
-            Yoga as system regulation. Not lineage. Not mantras. The body is the only path you can&apos;t
-            make excuses out of.
+            Yoga as system regulation. Not lineage. Not mantras. The body is the only path you
+            can&apos;t make excuses out of.
           </motion.p>
 
           <motion.a
@@ -519,13 +529,13 @@ export default function EkagraNow() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2 }}
-            className="group absolute bottom-10 left-1/2 -translate-x-1/2 font-mono text-[0.7rem] tracking-[0.28em] uppercase text-off-white/70 transition-colors hover:text-off-white"
+            className="group absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3 font-mono text-[0.66rem] tracking-[0.28em] uppercase text-off-white/70 transition-colors hover:text-ember md:bottom-10"
           >
             <span>Scroll if you're called to</span>
             <motion.span
               animate={{ y: [0, 6, 0] }}
               transition={{ repeat: Infinity, duration: 1.8, ease: "easeInOut" }}
-              className="mt-3 mx-auto block h-8 w-[1px] bg-gradient-to-b from-off-white/60 to-transparent"
+              className="block h-8 w-[1px] bg-gradient-to-b from-off-white/60 to-transparent"
             />
           </motion.a>
         </motion.div>
@@ -1048,16 +1058,21 @@ function OfferingDark({ data }: { data: any }) {
           </div>
         </div>
 
-        {/* middle — full-bleed image with parallax */}
+        {/* middle — portrait image, centered, editorial scale */}
         <Reveal delay={0.2}>
           <div className="mt-16 md:mt-24">
-            <ParallaxImage
-              src={data.image}
-              alt={data.imageAlt}
-              className="aspect-[16/9] w-full md:aspect-[21/9]"
-              intensity={80}
-              objectPosition="center 30%"
-            />
+            <div className="relative mx-auto max-w-[720px]">
+              <ParallaxImage
+                src={data.image}
+                alt={data.imageAlt}
+                className="aspect-[3/4] w-full"
+                intensity={50}
+                objectPosition="center"
+              />
+              {/* ember corner frame — editorial detail */}
+              <div className="pointer-events-none absolute -left-3 -top-3 h-12 w-12 border-l-2 border-t-2 border-ember/60 md:-left-5 md:-top-5 md:h-20 md:w-20" />
+              <div className="pointer-events-none absolute -bottom-3 -right-3 h-12 w-12 border-b-2 border-r-2 border-ember/60 md:-bottom-5 md:-right-5 md:h-20 md:w-20" />
+            </div>
           </div>
         </Reveal>
 
