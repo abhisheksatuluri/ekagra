@@ -454,14 +454,29 @@ export default function EkagraNow() {
         ref={heroRef}
         className="relative h-[100svh] min-h-[680px] w-full overflow-hidden bg-ink"
       >
+        {/* Blurred ambient fill — provides color presence on the edges
+            when the portrait image is contained on wide desktop viewports */}
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            src="/images/hero-vriksha-sun.jpg"
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            className="scale-125 object-cover opacity-55 blur-2xl"
+          />
+        </div>
+
+        {/* Main image — cover on mobile (full-bleed, object-position anchors subject),
+            contain on desktop (full portrait visible, letterboxed by blurred fill) */}
         <motion.div style={{ y: heroImageY }} className="absolute inset-0 -bottom-[160px]">
           <Image
             src="/images/hero-vriksha-sun.jpg"
             alt="Tree pose with the sun between prayer hands on the Ganga at sunset"
             fill
             priority
-            className="object-cover saturate-[1.05] contrast-[1.05]"
-            style={{ objectPosition: "center 25%" }}
+            className="object-cover saturate-[1.05] contrast-[1.05] md:object-contain"
+            style={{ objectPosition: "center 55%" }}
           />
         </motion.div>
 
