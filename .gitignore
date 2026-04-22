@@ -28,3 +28,5 @@ next-env.d.ts
 
 # local-only: internal strategy artifacts + claude harness settings
 /.claude/
+/ekagra-*.html
+/ekagra-*.md

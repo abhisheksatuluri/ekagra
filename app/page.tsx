@@ -105,7 +105,7 @@ export default function EkagraNow() {
                   <p>
                     This session helps shift you out of mental overdrive and bring you back into the body. Through
                     breath, posture, and intentional movement, we support the parasympathetic system, the part of your
-                    nervous system responsible for recovery and calm.
+                    system responsible for recovery and calm.
                   </p>
                   <p>
                     The work affects vagal tone and reduces accumulated sympathetic charge, bringing the system into
@@ -116,6 +116,18 @@ export default function EkagraNow() {
                     The session supports neurophysiological regulation and helps bring attention back to its rightful
                     center.
                   </p>
+                </div>
+
+                <div className="border-t border-deep-brown/10 pt-4">
+                  <h3 className="font-sans text-sm font-medium tracking-wider text-deep-brown md:text-base mb-3">
+                    WHAT CHANGES
+                  </h3>
+                  <div className="space-y-2 font-sans text-base leading-relaxed text-deep-brown/70 md:text-lg">
+                    <p>• Your exact escape points become obvious</p>
+                    <p>• You can't hide inside the practice</p>
+                    <p>• Corrections happen immediately, not over weeks</p>
+                    <p>• Progress compresses — what takes time alone speeds up</p>
+                  </div>
                 </div>
 
                 <div className="border-t border-deep-brown/10 pt-4">
@@ -176,10 +188,22 @@ export default function EkagraNow() {
                     high-precision sequence where breath and posture come into alignment.
                   </p>
                   <p>
-                    Each cue is deliberate. Each breath is placed. The result is a nervous system that holds steadiness
+                    Each cue is deliberate. Each breath is placed. The result is a system that holds steadiness
                     before the day even begins.
                   </p>
                   <p>Conducted online. In-person availability based on location.</p>
+                </div>
+
+                <div className="border-t border-deep-brown/10 pt-4">
+                  <h3 className="font-sans text-sm font-medium tracking-wider text-deep-brown md:text-base mb-3">
+                    WHAT CHANGES
+                  </h3>
+                  <div className="space-y-2 font-sans text-base leading-relaxed text-deep-brown/70 md:text-lg">
+                    <p>• You stop rushing through effort</p>
+                    <p>• The body becomes less reactive under load</p>
+                    <p>• Attention doesn't drop the moment it gets uncomfortable</p>
+                    <p>• You experience staying, not just moving</p>
+                  </div>
                 </div>
 
                 <div className="border-t border-deep-brown/10 pt-4">
@@ -259,13 +283,25 @@ export default function EkagraNow() {
                   <p>
                     These are short, targeted practices that quickly bring you back into a grounded state. We use
                     focused breathwork, simple movement, and still awareness to help shift your body out of stress mode.
-                    The nervous system responds fast to certain cues like held breath, slow controlled motion, or steady
+                    The system responds fast to certain cues like held breath, slow controlled motion, or steady
                     sound, and that's what these practices deliver.
                   </p>
                   <p>
                     These sessions fit into real life. Use them in the morning to start clear, mid day to recenter, or
                     before bed to unwind. Over time, they help your system stay more stable and less reactive.
                   </p>
+                </div>
+
+                <div className="border-t border-deep-brown/10 pt-4">
+                  <h3 className="font-sans text-sm font-medium tracking-wider text-deep-brown md:text-base mb-3">
+                    WHAT CHANGES
+                  </h3>
+                  <div className="space-y-2 font-sans text-base leading-relaxed text-deep-brown/70 md:text-lg">
+                    <p>• Quick return to the body when the day fragments</p>
+                    <p>• Short enough to actually do, consistently</p>
+                    <p>• Resets that shift the tone without taking the day over</p>
+                    <p>• Builds the habit of returning, not the burden of practice</p>
+                  </div>
                 </div>
 
                 <div className="border-t border-deep-brown/10 pt-4">
@@ -332,10 +368,26 @@ export default function EkagraNow() {
                     to stop leaking energy and start holding charge.
                   </p>
                   <p>
-                    Scientifically, it brings stability to parts of the nervous system responsible for rhythm and
+                    Scientifically, it brings stability to parts of the system responsible for rhythm and
                     alertness. It balances sleep patterns, builds focus, and helps reduce emotional volatility. Over
                     time, it builds what yoga calls ojas: a steady, grounded vitality you can feel in your spine.
                   </p>
+                </div>
+
+                <div className="border-t border-deep-brown/10 pt-4">
+                  <h3 className="font-sans text-sm font-medium tracking-wider text-deep-brown md:text-base mb-3">
+                    WHAT CHANGES
+                  </h3>
+                  <div className="space-y-2 font-sans text-base leading-relaxed text-deep-brown/70 md:text-lg">
+                    <p>• Sleep drops deeper — the body actually lets go</p>
+                    <p>• Energy stabilizes — fewer crashes, less dependence on stimulation</p>
+                    <p>• Internal noise reduces — less looping, less constant thinking pressure</p>
+                    <p>• Clarity sharpens — decisions feel simpler, cleaner</p>
+                    <p>• Body feels contained — less scattered, more precise movement and action</p>
+                    <p>• Discomfort is no longer avoided immediately — you can stay through it</p>
+                    <p>• Emotional swings flatten — less reactive, more grounded responses</p>
+                    <p>• A daily rhythm forms — not forced, but carried by repetition</p>
+                  </div>
                 </div>
 
                 <div className="border-t border-deep-brown/10 pt-4">
@@ -409,7 +461,7 @@ export default function EkagraNow() {
                 <div className="space-y-4 font-sans text-base leading-relaxed text-deep-brown/80 md:text-lg md:leading-relaxed">
                   <p>
                     When I'm present in a space, I don't entertain or perform. I regulate the environment. A grounded
-                    nervous system can shift a room. That's real biology. Bodies pick up on each other's signals, and
+                    system can shift a room. That's real biology. Bodies pick up on each other's signals, and
                     when mine is anchored, others feel it.
                   </p>
                   <p>
@@ -417,6 +469,18 @@ export default function EkagraNow() {
                     and no leakage. Through breath, silence, or voice, I bring the voltage that resets the space from
                     within.
                   </p>
+                </div>
+
+                <div className="border-t border-deep-brown/10 pt-4">
+                  <h3 className="font-sans text-sm font-medium tracking-wider text-deep-brown md:text-base mb-3">
+                    WHAT CHANGES
+                  </h3>
+                  <div className="space-y-2 font-sans text-base leading-relaxed text-deep-brown/70 md:text-lg">
+                    <p>• The space becomes more coherent — measurable in how people settle</p>
+                    <p>• Faster drop-in for participants — less warm-up, more depth</p>
+                    <p>• Presence that regulates without performing</p>
+                    <p>• A grounded reference in the room for the work you're hosting</p>
+                  </div>
                 </div>
 
                 <div className="border-t border-deep-brown/10 pt-4">
@@ -486,7 +550,7 @@ export default function EkagraNow() {
               <p>
                 What I offer isn't yoga as physical discipline or aesthetic display.
                 <br />
-                It's yoga as nervous system regulation.
+                It's yoga as system regulation.
                 <br />A return to the body's innate intelligence.
                 <br />A way to stop the constant leakage of energy and build something real from within.
                 <br />
