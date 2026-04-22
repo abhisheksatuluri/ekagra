@@ -461,7 +461,7 @@ export default function EkagraNow() {
             fill
             priority
             className="object-cover saturate-[1.05] contrast-[1.05]"
-            style={{ objectPosition: "center 55%" }}
+            style={{ objectPosition: "center 25%" }}
           />
         </motion.div>
 
