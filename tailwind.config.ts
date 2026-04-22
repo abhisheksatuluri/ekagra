@@ -21,9 +21,15 @@ const config: Config = {
     extend: {
       colors: {
         sand: "#F2EBDD",
+        "sand-deep": "#E8DFC9",
         "off-white": "#FAF9F6",
+        "off-white-2": "#F4F1E9",
         "deep-brown": "#4A3F35",
+        "deep-brown-darker": "#35291F",
+        "brown-mid": "#6E5E50",
+        "brown-soft": "#8C7D70",
         ember: "#E96B2C",
+        "ember-deep": "#BF5524",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -91,6 +97,7 @@ const config: Config = {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         serif: ["var(--font-dm-serif-text)", "Georgia", "serif"],
         display: ["var(--font-dm-serif-display)", "Georgia", "serif"],
+        mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
       },
     },
   },
