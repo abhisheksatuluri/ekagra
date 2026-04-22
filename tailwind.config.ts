@@ -20,16 +20,44 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // ── Ekāgra earth palette ─────────────────────────────────────────
+        ink: "#0B0906",            // near-black canvas (primary background)
+        "ink-2": "#14100B",        // slightly lifted dark for layered surfaces
+        "ink-3": "#1C1711",        // third dark tone for cards on dark
+        cream: "#E8DFC9",          // warm off-white — text on dark
+        "cream-2": "#F2EBDD",      // slightly brighter cream — alt surfaces
+        "cream-mute": "#B8AE96",   // muted cream for secondary text on dark
+
+        // four earth accents — one per offering
+        olive: "#7F7524",          // Join-In · entry · Spine First
+        "olive-deep": "#605817",
+        "olive-soft": "rgba(127,117,36,0.15)",
+
+        rust: "#C94E2A",           // First Spark · ignition · Fire Room
+        "rust-deep": "#A13D1E",
+        "rust-soft": "rgba(201,78,42,0.15)",
+
+        sage: "#6E786A",           // Axis First · presence · Collaborations
+        "sage-deep": "#545E50",
+        "sage-soft": "rgba(110,120,106,0.15)",
+
+        taupe: "#6C574A",          // The Arc · journey · Root/Stay Sessions
+        "taupe-deep": "#544237",
+        "taupe-soft": "rgba(108,87,74,0.18)",
+
+        // ── Legacy aliases (keep so old classes don't break) ───────────
         sand: "#F2EBDD",
         "sand-deep": "#E8DFC9",
         "off-white": "#FAF9F6",
         "off-white-2": "#F4F1E9",
         "deep-brown": "#4A3F35",
-        "deep-brown-darker": "#35291F",
+        "deep-brown-darker": "#0B0906",  // now ink
         "brown-mid": "#6E5E50",
         "brown-soft": "#8C7D70",
-        ember: "#E96B2C",
-        "ember-deep": "#BF5524",
+        ember: "#C94E2A",               // now rust
+        "ember-deep": "#A13D1E",
+
+        // ── shadcn tokens ───────────────────────────────────────────────
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
