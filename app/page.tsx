@@ -709,17 +709,15 @@ export default function EkagraNow() {
               </Reveal>
 
               <Reveal delay={0.15}>
-                <div className="border-l-2 border-rust pl-6 md:pl-10">
-                  <p className="font-display text-[clamp(1.3rem,2.6vw,2rem)] leading-[1.3] text-cream">
-                    This path isn't about flexibility or posture. It's about{" "}
-                    <em className="not-italic text-rust">electricity.</em> About breath. About
-                    removing what's false.
-                  </p>
-                </div>
+                <p className="font-serif text-lg leading-[1.7] text-cream/75 md:text-xl">
+                  This path isn't about flexibility or posture. It's about{" "}
+                  <em className="not-italic text-rust">electricity.</em> About breath. About
+                  removing what's false.
+                </p>
               </Reveal>
 
               <Reveal delay={0.2}>
-                <p className="font-serif text-base leading-[1.7] text-cream/70 md:text-lg">
+                <p className="font-serif text-lg leading-[1.7] text-cream/75 md:text-xl">
                   What I offer isn't yoga as physical discipline or aesthetic display. It's yoga as
                   system regulation. A return to the body's innate intelligence. A way to stop the
                   constant leakage of energy and build something real from within.
