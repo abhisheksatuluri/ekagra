@@ -838,7 +838,7 @@ export default function EkagraNow() {
                 ekāgra<span className="text-rust">.</span>
               </a>
               <p className="mt-4 max-w-[32ch] font-serif text-sm leading-relaxed text-cream/55">
-                One-pointedness, trained through the body. Rishikesh, on the Ganga.
+                One-pointedness, trained through the body.
               </p>
             </div>
             <div>
@@ -868,7 +868,7 @@ export default function EkagraNow() {
           <div className="mt-14 flex flex-wrap items-baseline justify-between gap-4 border-t border-cream/10 pt-8 font-mono text-[0.68rem] tracking-[0.14em] uppercase text-cream/40">
             <span>© 2026 · Ekāgra</span>
             <span className="font-serif italic normal-case tracking-normal text-cream/55">
-              Built from the Ganga · शिवमार्गे स्थिरो भव
+              शिवमार्गे स्थिरो भव
             </span>
             <a href="#top" className="transition-colors hover:text-rust">
               Back to top ↑
@@ -899,10 +899,11 @@ function OfferingEarth({
 }) {
   const padding = compact ? "py-20 md:py-28" : "py-24 md:py-40"
 
-  // Color tokens per earth variant
+  // Color tokens per earth variant — includes hex for the camouflage edge-blend
   const tone = {
     olive: {
       section: "bg-olive",
+      hex: "#7F7524",
       text: "text-cream",
       textMuted: "text-cream/80",
       textSoft: "text-cream/65",
@@ -913,6 +914,7 @@ function OfferingEarth({
     },
     taupe: {
       section: "bg-taupe",
+      hex: "#6C574A",
       text: "text-cream",
       textMuted: "text-cream/82",
       textSoft: "text-cream/65",
@@ -923,6 +925,7 @@ function OfferingEarth({
     },
     sage: {
       section: "bg-sage",
+      hex: "#6E786A",
       text: "text-cream",
       textMuted: "text-cream/85",
       textSoft: "text-cream/70",
@@ -933,6 +936,7 @@ function OfferingEarth({
     },
     cream: {
       section: "bg-cream-2",
+      hex: "#F2EBDD",
       text: "text-ink",
       textMuted: "text-ink/78",
       textSoft: "text-ink/60",
@@ -954,12 +958,27 @@ function OfferingEarth({
           }`}
         >
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <ParallaxImage
-              src={data.image}
-              alt={data.imageAlt}
-              className="aspect-[4/5] w-full"
-              intensity={compact ? 30 : 60}
-            />
+            {/* Camouflage: 4-edge gradient fades image into section bg color,
+                so the image dissolves into the page — no hard photo border. */}
+            <div className="relative aspect-[4/5] w-full">
+              <ParallaxImage
+                src={data.image}
+                alt={data.imageAlt}
+                className="aspect-[4/5] w-full"
+                intensity={compact ? 30 : 60}
+              />
+              <div
+                className="pointer-events-none absolute inset-0 z-10"
+                style={{
+                  background: `
+                    linear-gradient(to top, ${tone.hex} 0%, transparent 18%),
+                    linear-gradient(to bottom, ${tone.hex} 0%, transparent 18%),
+                    linear-gradient(to left, ${tone.hex} 0%, transparent 14%),
+                    linear-gradient(to right, ${tone.hex} 0%, transparent 14%)
+                  `,
+                }}
+              />
+            </div>
           </div>
 
           <div className={`flex flex-col gap-10 md:gap-12 ${tone.text}`}>
@@ -1083,15 +1102,30 @@ function OfferingFire({ data }: { data: any }) {
         <Reveal delay={0.2}>
           <div className="mt-16 md:mt-24">
             <div className="relative mx-auto max-w-[720px]">
-              <ParallaxImage
-                src={data.image}
-                alt={data.imageAlt}
-                className="aspect-[3/4] w-full"
-                intensity={50}
-                objectPosition="center"
-              />
-              <div className="pointer-events-none absolute -left-3 -top-3 h-12 w-12 border-l-2 border-t-2 border-rust/70 md:-left-5 md:-top-5 md:h-20 md:w-20" />
-              <div className="pointer-events-none absolute -bottom-3 -right-3 h-12 w-12 border-b-2 border-r-2 border-rust/70 md:-bottom-5 md:-right-5 md:h-20 md:w-20" />
+              {/* Camouflage: image edges fade into the ink canvas */}
+              <div className="relative aspect-[3/4] w-full">
+                <ParallaxImage
+                  src={data.image}
+                  alt={data.imageAlt}
+                  className="aspect-[3/4] w-full"
+                  intensity={50}
+                  objectPosition="center"
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 z-10"
+                  style={{
+                    background: `
+                      linear-gradient(to top, #0B0906 0%, transparent 18%),
+                      linear-gradient(to bottom, #0B0906 0%, transparent 18%),
+                      linear-gradient(to left, #0B0906 0%, transparent 14%),
+                      linear-gradient(to right, #0B0906 0%, transparent 14%)
+                    `,
+                  }}
+                />
+              </div>
+              {/* Ember corner brackets */}
+              <div className="pointer-events-none absolute -left-3 -top-3 z-20 h-12 w-12 border-l-2 border-t-2 border-rust/70 md:-left-5 md:-top-5 md:h-20 md:w-20" />
+              <div className="pointer-events-none absolute -bottom-3 -right-3 z-20 h-12 w-12 border-b-2 border-r-2 border-rust/70 md:-bottom-5 md:-right-5 md:h-20 md:w-20" />
             </div>
           </div>
         </Reveal>
