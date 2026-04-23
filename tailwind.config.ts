@@ -37,9 +37,9 @@ const config: Config = {
         "rust-deep": "#A13D1E",
         "rust-soft": "rgba(201,78,42,0.15)",
 
-        sage: "#6E786A",           // Axis First · presence · Collaborations
-        "sage-deep": "#545E50",
-        "sage-soft": "rgba(110,120,106,0.15)",
+        sage: "#5F6857",           // Axis First · presence · Collaborations (more earthy, less WhatsApp-green)
+        "sage-deep": "#4A5144",
+        "sage-soft": "rgba(95,104,87,0.15)",
 
         taupe: "#6C574A",          // The Arc · journey · Root/Stay Sessions
         "taupe-deep": "#544237",

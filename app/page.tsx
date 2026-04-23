@@ -673,12 +673,25 @@ export default function EkagraNow() {
 
           <div className="mt-12 grid gap-14 md:mt-16 md:grid-cols-[1fr_1.2fr] md:gap-20">
             <div className="md:sticky md:top-28 md:self-start">
-              <ParallaxImage
-                src="/images/practice-concrete-side.jpg"
-                alt="Side stretch posture against a concrete wall"
-                className="aspect-[3/4] w-full"
-                intensity={40}
-              />
+              <div className="relative aspect-[3/4] w-full">
+                <ParallaxImage
+                  src="/images/sharath-portrait.jpg"
+                  alt="Sharath — the person behind Ekāgra"
+                  className="aspect-[3/4] w-full"
+                  intensity={40}
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 z-10"
+                  style={{
+                    background: `
+                      linear-gradient(to top, #0B0906 0%, transparent 8%),
+                      linear-gradient(to bottom, #0B0906 0%, transparent 8%),
+                      linear-gradient(to left, #0B0906 0%, transparent 6%),
+                      linear-gradient(to right, #0B0906 0%, transparent 6%)
+                    `,
+                  }}
+                />
+              </div>
             </div>
             <div className="space-y-10 md:space-y-14">
               <Reveal>
@@ -737,12 +750,25 @@ export default function EkagraNow() {
               </Reveal>
             </div>
             <div className="order-1 md:order-2 md:sticky md:top-28 md:self-start">
-              <ParallaxImage
-                src="/images/ganga-halasana-sunset.jpg"
-                alt="Halasana at sunset by the Ganga"
-                className="aspect-[3/4] w-full"
-                intensity={40}
-              />
+              <div className="relative aspect-[3/4] w-full">
+                <ParallaxImage
+                  src="/images/ganga-halasana-sunset.jpg"
+                  alt="Halasana at sunset"
+                  className="aspect-[3/4] w-full"
+                  intensity={40}
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 z-10"
+                  style={{
+                    background: `
+                      linear-gradient(to top, #0B0906 0%, transparent 8%),
+                      linear-gradient(to bottom, #0B0906 0%, transparent 8%),
+                      linear-gradient(to left, #0B0906 0%, transparent 6%),
+                      linear-gradient(to right, #0B0906 0%, transparent 6%)
+                    `,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -925,7 +951,7 @@ function OfferingEarth({
     },
     sage: {
       section: "bg-sage",
-      hex: "#6E786A",
+      hex: "#5F6857",
       text: "text-cream",
       textMuted: "text-cream/85",
       textSoft: "text-cream/70",
@@ -958,8 +984,8 @@ function OfferingEarth({
           }`}
         >
           <div className="lg:sticky lg:top-24 lg:self-start">
-            {/* Camouflage: 4-edge gradient fades image into section bg color,
-                so the image dissolves into the page — no hard photo border. */}
+            {/* Camouflage: subtle 4-edge gradient blends image into the section
+                color without washing out the image itself. */}
             <div className="relative aspect-[4/5] w-full">
               <ParallaxImage
                 src={data.image}
@@ -971,10 +997,10 @@ function OfferingEarth({
                 className="pointer-events-none absolute inset-0 z-10"
                 style={{
                   background: `
-                    linear-gradient(to top, ${tone.hex} 0%, transparent 18%),
-                    linear-gradient(to bottom, ${tone.hex} 0%, transparent 18%),
-                    linear-gradient(to left, ${tone.hex} 0%, transparent 14%),
-                    linear-gradient(to right, ${tone.hex} 0%, transparent 14%)
+                    linear-gradient(to top, ${tone.hex} 0%, transparent 8%),
+                    linear-gradient(to bottom, ${tone.hex} 0%, transparent 8%),
+                    linear-gradient(to left, ${tone.hex} 0%, transparent 6%),
+                    linear-gradient(to right, ${tone.hex} 0%, transparent 6%)
                   `,
                 }}
               />
@@ -1102,7 +1128,7 @@ function OfferingFire({ data }: { data: any }) {
         <Reveal delay={0.2}>
           <div className="mt-16 md:mt-24">
             <div className="relative mx-auto max-w-[720px]">
-              {/* Camouflage: image edges fade into the ink canvas */}
+              {/* Camouflage: subtle edge blend into ink canvas */}
               <div className="relative aspect-[3/4] w-full">
                 <ParallaxImage
                   src={data.image}
@@ -1115,10 +1141,10 @@ function OfferingFire({ data }: { data: any }) {
                   className="pointer-events-none absolute inset-0 z-10"
                   style={{
                     background: `
-                      linear-gradient(to top, #0B0906 0%, transparent 18%),
-                      linear-gradient(to bottom, #0B0906 0%, transparent 18%),
-                      linear-gradient(to left, #0B0906 0%, transparent 14%),
-                      linear-gradient(to right, #0B0906 0%, transparent 14%)
+                      linear-gradient(to top, #0B0906 0%, transparent 8%),
+                      linear-gradient(to bottom, #0B0906 0%, transparent 8%),
+                      linear-gradient(to left, #0B0906 0%, transparent 6%),
+                      linear-gradient(to right, #0B0906 0%, transparent 6%)
                     `,
                   }}
                 />
